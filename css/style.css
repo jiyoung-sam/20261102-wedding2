@@ -1,0 +1,326 @@
+/* 기본 색상과 글꼴 */
+:root {
+  --paper: #fbf8f5;
+  --ink: #514943;
+  --muted: #93877e;
+  --line: #cfc3b9;
+  --accent: #e9a494;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 16px;
+  color: var(--ink);
+  background: #eee7e1;
+  font-family: "Gowun Batang", "Nanum Myeongjo", serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+button, a { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; }
+.invitation {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.08fr 1fr .96fr;
+  gap: 16px;
+  align-items: stretch;
+}
+.panel {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background: var(--paper);
+  box-shadow: 0 8px 28px rgba(90, 70, 55, .035);
+}
+.left-panel, .center-panel, .right-panel { position: relative; }
+.top-nav {
+  position: absolute;
+  z-index: 2;
+  top: 12px; left: 8%; right: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font: 9px/1.4 Arial, sans-serif;
+  letter-spacing: 1.2px;
+}
+.top-nav a { padding: 7px 0; }
+.top-nav .heart { font-size: 19px; line-height: 1; }
+.hero {
+  background: linear-gradient(180deg, #f6eee9 0%, #fbe8dc 55%, #e8d4c3 100%);
+  padding-top: 104px;
+}
+.hero-copy { text-align: center; padding: 12px 10px 0; }
+.hero h1 {
+  margin: 0 0 14px;
+  font-size: clamp(19px, 2vw, 26px);
+  font-weight: 400;
+  letter-spacing: .14em;
+}
+.hero h1 span { color: var(--accent); font-size: .8em; margin: 0 7px; }
+.hero-copy p { margin: 0 0 12px; color: #82756d; font-size: 13px; }
+.hero-copy time { letter-spacing: .25em; font-size: 15px; }
+.down-mark { color: #b6a79a; margin: 18px 0 10px; }
+.photo-button {
+  display: block;
+  padding: 0;
+  width: 100%;
+  border: 0;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: #eee6df;
+}
+.photo-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.photo-button:hover img { transform: scale(1.035); }
+.hero-photo { height: clamp(235px, 28vw, 360px); }
+.invitation-copy { padding: 42px 10% 24px; }
+.script-title {
+  margin: 0 0 12px;
+  color: #55473e;
+  font-family: "Gowun Batang", serif;
+  font-style: italic;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.2;
+  letter-spacing: .02em;
+}
+.invitation-copy p:not(.script-title), .story-section > p {
+  color: #796f68;
+  font-size: 13px;
+}
+.short-line { width: 40px; height: 1px; background: var(--line); margin: 34px 0; }
+.story-section { padding: 0 6% 10px 10%; }
+.story-section h2, .map-section h2, .contact-section h2 {
+  margin: 0 0 10px;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: .08em;
+}
+.story-photos { display: grid; grid-template-columns: 1.1fr .9fr; gap: 8px; margin-top: 15px; }
+.story-photos .photo-button { height: 190px; }
+.timeline { display: flex; justify-content: space-between; gap: 8px; margin-top: 12px; color: #8b8078; font-size: 10px; }
+.timeline div { display: flex; flex-direction: column; }
+.timeline b { font-weight: 400; letter-spacing: .08em; font-size: 11px; }
+.together { position: relative; min-height: 250px; padding: 65px 10% 35px; text-align: right; overflow: hidden; }
+.together .soft-flower { position: absolute; left: -90px; bottom: -90px; width: 68%; opacity: .36; mix-blend-mode: multiply; }
+.together .script-title { position: relative; color: #a18a70; font-size: 34px; }
+.together p:last-child { position: relative; color: #897e74; font-size: 12px; }
+.section-heading { text-align: center; padding: 28px 12px 18px; }
+.section-heading > span { color: #a39489; font: 10px Arial, sans-serif; letter-spacing: 2px; }
+.section-heading h2 { margin: 8px 0 6px; font-size: 25px; font-weight: 400; letter-spacing: .08em; }
+.section-heading p { margin: 0; color: #93877f; font-size: 12px; }
+.gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 10px; }
+.gallery-grid .photo-button { height: clamp(105px, 13vw, 170px); }
+.gallery-grid .wide { grid-column: 1 / -1; height: clamp(170px, 20vw, 260px); }
+.outline-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: fit-content;
+  min-width: 172px;
+  min-height: 42px;
+  margin: 26px auto;
+  padding: 7px 20px;
+  border: 1px solid #bdb1a7;
+  background: transparent;
+  color: #6f6259;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.outline-button:hover { background: #eee6df; }
+blockquote {
+  margin: 32px 10px 28px;
+  padding: 0 10px;
+  text-align: center;
+  color: #887c73;
+  font-size: 13px;
+  line-height: 2.05;
+}
+.quote-mark { display: block; color: #b7a18d; font-size: 34px; line-height: 1; }
+.gallery-ending { position: relative; min-height: 360px; overflow: hidden; text-align: right; padding: 185px 9% 25px; }
+.gallery-ending img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .7; }
+.gallery-ending .script-title, .gallery-ending p:last-child { position: relative; }
+.gallery-ending .script-title { font-size: 32px; }
+.gallery-ending p:last-child { font-size: 11px; color: #74675e; }
+.wedding-heading { padding-top: 38px; }
+.wedding-heading .short-line { margin: 18px auto 0; }
+.event-info { padding: 10px 12% 22px; }
+.info-row { display: grid; grid-template-columns: 28px 1fr; gap: 12px; margin: 10px 0 22px; }
+.info-icon { font-size: 22px; line-height: 1.5; text-align: center; }
+.info-row b { font-weight: 400; font-size: 12px; }
+.info-row p { margin: 2px 0 0; color: #786e66; font-size: 12px; }
+.venue-photo { height: clamp(155px, 18vw, 230px); margin: 0 0 25px; }
+.map-section, .contact-section { padding: 0 8% 10px; text-align: center; }
+.map-section .short-line, .contact-section .short-line { margin: 28px auto 18px; }
+.map-section h2, .contact-section h2 { font-size: 23px; }
+.map-preview { display: block; width: 100%; height: 155px; overflow: hidden; background: #e7e4df; }
+.map-preview iframe { width: 100%; height: 100%; border: 0; }
+.address { color: #847970; font-size: 11px; margin: 10px 0 0; }
+.map-button { margin: 14px auto 26px; }
+.contact-desc { color: #81766e; font-size: 11px; }
+.account-row {
+  display: grid;
+  grid-template-columns: 32px 48px minmax(0,1fr) 40px;
+  align-items: center;
+  gap: 5px;
+  margin: 8px 0;
+  padding: 10px 7px;
+  border-radius: 5px;
+  background: #f5f0ec;
+  font-size: 10px;
+  text-align: left;
+}
+.account-row b { font-weight: 400; }
+.account-row span:nth-child(3) { overflow-wrap: anywhere; line-height: 1.6; }
+.copy-button {
+  padding: 4px 5px;
+  border: 1px solid #b8aaa0;
+  background: transparent;
+  font-size: 10px;
+  cursor: pointer;
+}
+.copy-button:hover { background: #e9dfd7; }
+.closing { position: relative; min-height: 300px; margin-top: 35px; overflow: hidden; background: linear-gradient(180deg, #f7eee8, #edcdb9); }
+.closing-script { position: absolute; z-index: 1; top: 25px; left: 8%; margin: 0; color: #51433b; font-size: 24px; font-style: italic; line-height: 1.5; }
+.closing-photo { position: absolute; inset: 0; height: 100%; background: transparent; }
+.closing-photo img { object-position: center; }
+.modal, .toast-modal {
+  position: fixed; z-index: 20; inset: 0;
+  display: none; align-items: center; justify-content: center;
+  padding: 24px; background: rgba(28, 23, 20, .88);
+}
+.modal.is-open, .toast-modal.is-open { display: flex; }
+.modal img { max-width: min(92vw, 1000px); max-height: 88vh; object-fit: contain; box-shadow: 0 10px 50px #0005; }
+.modal-close { position: absolute; top: 15px; right: 22px; border: 0; background: transparent; color: white; font: 36px Arial; cursor: pointer; }
+.toast-modal { background: rgba(45, 37, 32, .42); }
+.toast-card { width: min(100%, 310px); padding: 28px 22px 22px; border-radius: 12px; background: #fffaf6; text-align: center; box-shadow: 0 12px 40px #0002; }
+.toast-check { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #e8d9ce; color: #66564c; font-size: 20px; }
+.toast-card h3 { margin: 12px 0 5px; font-size: 16px; font-weight: 400; }
+.toast-card p { color: #8b7c72; font-size: 13px; }
+.toast-card button { min-width: 90px; padding: 7px 18px; border: 1px solid #b9aaa0; background: transparent; cursor: pointer; }
+
+@media (min-width: 1200px) {
+  body { padding: 18px; }
+  .invitation { gap: 18px; }
+}
+@media (max-width: 760px) {
+  body { padding: 0; background: var(--paper); }
+  .invitation { display: block; width: 100%; max-width: 520px; }
+  .panel { border-radius: 0; box-shadow: none; }
+  .left-panel, .center-panel, .right-panel { margin-bottom: 12px; }
+  .top-nav { top: 10px; }
+  .hero { padding-top: 82px; }
+  .hero-photo { height: min(92vw, 440px); }
+  .hero h1 { font-size: 23px; }
+  .invitation-copy { padding-top: 35px; }
+  .story-photos .photo-button { height: 42vw; max-height: 240px; }
+  .together { min-height: 230px; }
+  .section-heading { padding-top: 35px; }
+  .gallery-grid .photo-button { height: 42vw; max-height: 230px; }
+  .gallery-grid .wide { height: 58vw; max-height: 330px; }
+  .gallery-ending { min-height: 390px; padding-top: 210px; }
+  .venue-photo { height: 58vw; max-height: 310px; }
+  .map-preview { height: 58vw; max-height: 260px; }
+  .closing { min-height: 360px; }
+}
+
+
+/* --------------------------------------------------
+   1단 원페이지 레이아웃
+   PC에서도 좌우 3열이 아닌 하나의 세로 흐름으로 표시합니다.
+-------------------------------------------------- */
+.invitation {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 760px);
+  gap: 18px;
+  align-items: stretch;
+}
+.panel {
+  width: 100%;
+  border-radius: 16px;
+}
+.left-panel, .center-panel, .right-panel {
+  width: 100%;
+}
+
+/* 세로형 원페이지에서 사진이 지나치게 길거나 작아지지 않도록 조정 */
+.hero-photo {
+  height: clamp(300px, 62vw, 560px);
+}
+.gallery-grid .photo-button {
+  height: clamp(180px, 32vw, 300px);
+}
+.gallery-grid .wide {
+  height: clamp(250px, 48vw, 430px);
+}
+.venue-photo {
+  height: clamp(230px, 42vw, 360px);
+}
+.map-preview {
+  height: clamp(220px, 38vw, 320px);
+}
+.gallery-ending {
+  min-height: 420px;
+}
+.closing {
+  min-height: 430px;
+}
+
+/* 휴대폰에서는 좌우 여백을 줄이고 세로 흐름을 유지 */
+@media (max-width: 760px) {
+  body {
+    padding: 0;
+    background: var(--paper);
+  }
+  .invitation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 520px;
+    gap: 0;
+  }
+  .panel {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+  .left-panel, .center-panel, .right-panel {
+    margin-bottom: 0;
+  }
+  .hero-photo {
+    height: min(105vw, 480px);
+  }
+  .gallery-grid .photo-button {
+    height: 43vw;
+    max-height: 260px;
+  }
+  .gallery-grid .wide {
+    height: 62vw;
+    max-height: 360px;
+  }
+  .venue-photo {
+    height: 62vw;
+    max-height: 330px;
+  }
+  .map-preview {
+    height: 58vw;
+    max-height: 280px;
+  }
+  .gallery-ending {
+    min-height: 390px;
+  }
+  .closing {
+    min-height: 390px;
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4eee9">
+  <meta name="description" content="김민준과 이서연의 결혼식에 초대합니다.">
+  <title>김민준 ♥ 이서연 | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="invitation">
+    <!-- 왼쪽: 초대 인사와 두 사람의 이야기 -->
+    <section class="panel left-panel" id="home">
+      <nav class="top-nav" aria-label="주요 메뉴">
+        <a href="#home">HOME</a><a href="#story">STORY</a><a href="#gallery">GALLERY</a><a href="#location">LOCATION</a>
+        <a class="heart" href="#contact" aria-label="마음 전하기">♡</a>
+      </nav>
+      <header class="hero">
+        <div class="hero-copy">
+          <h1>김 민 준 <span>♥</span> 이 서 연</h1>
+          <p>서로의 오늘이 되어,<br>함께 더 빛날 내일을 약속합니다.</p>
+          <time>2026 . 00 . 00</time>
+          <div class="down-mark">⌄</div>
+        </div>
+        <button class="photo-button hero-photo" data-photo="images/hero-couple.jpg" aria-label="웨딩 사진 크게 보기">
+          <img src="images/hero-couple.jpg" alt="노을 아래 나란히 서 있는 신랑과 신부">
+        </button>
+      </header>
+
+      <section class="invitation-copy">
+        <p class="script-title">Invitation</p>
+        <p>소중한 분들을 모시고<br>저희 두 사람이 새로운 시작을 하려 합니다.<br>함께하셔서<br>저희의 첫걸음을 축복해 주세요.</p>
+        <div class="short-line"></div>
+      </section>
+
+      <section class="story-section" id="story">
+        <h2>Our Story</h2>
+        <p>서로의 일상이 특별해진 순간부터,<br>지금까지, 그리고 앞으로도<br>함께 걷고 싶습니다.</p>
+        <div class="story-photos">
+          <button class="photo-button" data-photo="images/story-hands.jpg"><img src="images/story-hands.jpg" alt="두 사람의 손"></button>
+          <button class="photo-button" data-photo="images/story-walk.jpg"><img src="images/story-walk.jpg" alt="함께 걷는 두 사람"></button>
+        </div>
+        <div class="timeline">
+          <div><b>2020</b><span>처음 만난 날</span></div>
+          <div><b>2023</b><span>서로를 더 깊이 알게 된 시간</span></div>
+          <div><b>2026</b><span>함께할 내일</span></div>
+        </div>
+      </section>
+      <div class="together">
+        <img src="images/flower-detail.jpg" alt="" class="soft-flower">
+        <p class="script-title">Better<br>Together</p>
+        <p>지금, 그리고 언제나<br>함께</p>
+      </div>
+    </section>
+
+    <!-- 가운데: 웨딩 갤러리 -->
+    <section class="panel center-panel" id="gallery">
+      <header class="section-heading">
+        <span>GALLERY</span>
+        <h2>우리의 순간들</h2>
+        <p>평범한 하루들이 모여,<br>특별한 이야기가 되었습니다.</p>
+      </header>
+      <div class="gallery-grid">
+        <button class="photo-button wide" data-photo="images/gallery-main.jpg"><img src="images/gallery-main.jpg" alt="서로 마주 보는 신랑 신부"></button>
+        <button class="photo-button" data-photo="images/gallery-rings.jpg"><img src="images/gallery-rings.jpg" alt="웨딩 반지"></button>
+        <button class="photo-button" data-photo="images/gallery-flowers.jpg"><img src="images/gallery-flowers.jpg" alt="부케와 꽃"></button>
+        <button class="photo-button wide" data-photo="images/gallery-beach.jpg"><img src="images/gallery-beach.jpg" alt="해변을 걷는 신랑 신부"></button>
+        <button class="photo-button" data-photo="images/gallery-table.jpg"><img src="images/gallery-table.jpg" alt="웨딩 테이블 장식"></button>
+        <button class="photo-button" data-photo="images/gallery-walk.jpg"><img src="images/gallery-walk.jpg" alt="함께 걷는 신랑 신부"></button>
+      </div>
+      <button class="outline-button" id="morePhotos">더 많은 사진 보기 <span>→</span></button>
+      <blockquote>
+        <span class="quote-mark">“</span>
+        좋은 사람과 함께라면<br>어떤 하루도 빛날 거라는 걸<br>이제는 압니다.<br>늘 그랬듯, 서로의 곁에서<br>잘 걸어가겠습니다.
+      </blockquote>
+      <div class="gallery-ending">
+        <img src="images/flower-detail.jpg" alt="꽃과 반지">
+        <p class="script-title">Thank you</p>
+        <p>소중한 마음으로<br>함께해 주세요.</p>
+      </div>
+    </section>
+
+    <!-- 오른쪽: 예식 정보, 오시는 길, 연락처 -->
+    <section class="panel right-panel" id="location">
+      <header class="section-heading wedding-heading">
+        <span>WEDDING DAY</span>
+        <h2>예식 안내</h2>
+        <div class="short-line"></div>
+      </header>
+      <div class="event-info">
+        <div class="info-row">
+          <span class="info-icon">▦</span>
+          <div><b>날짜</b><p>2026년 00월 00일 (요일)<br>오후 00시 00분</p></div>
+        </div>
+        <div class="info-row">
+          <span class="info-icon">♧</span>
+          <div><b>예식장</b><p>그랜드웨딩홀 서울<br>서울특별시 강남구 테헤란로 000</p></div>
+        </div>
+      </div>
+      <button class="photo-button venue-photo" data-photo="images/venue.jpg"><img src="images/venue.jpg" alt="웨딩홀 예식장 내부"></button>
+
+      <section class="map-section">
+        <div class="short-line"></div>
+        <h2>오시는 길</h2>
+        <a class="map-preview" href="https://www.google.com/maps/search/?api=1&query=그랜드웨딩홀+서울" target="_blank" rel="noopener" aria-label="구글 지도에서 예식장 보기">
+          <iframe title="예식장 주변 지도" src="https://maps.google.com/maps?q=Gangnam-gu%20Seoul%20Korea&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </a>
+        <p class="address">서울특별시 강남구 테헤란로 000</p>
+        <a class="outline-button map-button" href="https://www.google.com/maps/dir/?api=1&destination=그랜드웨딩홀+서울" target="_blank" rel="noopener">지도 앱으로 연결하기 <span>→</span></a>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="short-line"></div>
+        <h2>마음 전하실 곳</h2>
+        <p class="contact-desc">축하의 마음을 전해주시는 분들께<br>감사한 마음으로 간직하겠습니다.</p>
+        <div class="account-row"><span>신랑</span><b>김민준</b><span>100-1234-567890<br>(은행명)</span><button class="copy-button" data-copy="100-1234-567890">복사</button></div>
+        <div class="account-row"><span>신부</span><b>이서연</b><span>100-9876-543210<br>(은행명)</span><button class="copy-button" data-copy="100-9876-543210">복사</button></div>
+      </section>
+      <footer class="closing">
+        <p class="closing-script">함께해 주셔서<br>감사합니다.</p>
+        <button class="photo-button closing-photo" data-photo="images/thanks-couple.jpg"><img src="images/thanks-couple.jpg" alt="서로 마주 보는 신랑 신부의 마지막 인사"></button>
+      </footer>
+    </section>
+  </main>
+
+  <!-- 사진 확대 팝업 -->
+  <div class="modal" id="photoModal" aria-hidden="true">
+    <button class="modal-close" aria-label="닫기">×</button>
+    <img id="modalImage" src="" alt="확대된 웨딩 사진">
+  </div>
+
+  <!-- 복사 완료 안내 팝업 -->
+  <div class="toast-modal" id="copyModal" aria-hidden="true">
+    <div class="toast-card">
+      <span class="toast-check">✓</span>
+      <h3>계좌번호가 복사되었습니다</h3>
+      <p id="copiedNumber"></p>
+      <button id="closeCopyModal">확인</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
